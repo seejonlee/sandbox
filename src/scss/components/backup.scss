@@ -1,0 +1,158 @@
+$ns: '.tab-scroll';
+
+#{$ns} {
+  border: 3px solid red;
+  box-sizing: border-box;
+  
+  grid-template-rows: repeat(64, 1fr); // TODO: Try 3 explicit rows with auto-fit for the remaining sections.
+  
+  &__nav-item {
+    cursor: pointer;
+    z-index: 1000;
+    position: relative;
+    
+    &--first {
+      grid-column: 2 / span 10;
+      grid-row: 2;
+    }
+    
+    &--middle {
+      grid-column: 2 / span 10;
+      grid-row: 7;
+    }
+    
+    &--last {
+      grid-column: 2 / span 10;
+      grid-row: 12;
+    }
+  }
+  
+  &__link {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 36px;
+
+    &--inactive {
+      h2 {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &__section {
+    min-height: 1590px;
+    grid-column: 1 / -1;
+    grid-row: span 16;
+  }
+
+  &__section--bg {
+    background-color: #0E1D3A;
+    grid-row: 1 / span 16;
+  }
+
+  &__section--engineered {
+    background-color: #4E76BA;
+  }
+
+  &__section--install {
+    background-color: #384422;
+  }
+
+  &__section--control {
+    background-color: #96593D;
+  }
+
+  @media screen and (min-width: 678px) {
+    &__nav-item {
+      position: sticky;
+      top: 0;
+      
+      &--first {
+        grid-column: 2 / span 3;
+        grid-row: 2;
+      }
+      
+      &--middle {
+        grid-column: 7 / span 3;
+        grid-row: 6;
+      }
+      
+      &--last {
+        grid-column: 12 / span 3;
+        grid-row: 3;
+      }
+    }
+    
+    &__link {
+  
+      &--inactive {
+        h2 {
+        }
+      }
+    }
+  
+    &__section {
+      min-height: 1590px;
+      grid-column: 1 / -1;
+      grid-row: span 16;
+    }
+  
+    &__section--bg {
+      grid-row: 1 / span 16;
+    }
+  
+    &__section--engineered {
+    }
+  
+    &__section--install {
+    }
+  
+    &__section--control {
+    }
+  }
+
+  @media screen and (min-width: 1400px) {
+    &__nav-item {
+      position: sticky;
+      top: 0;
+      
+      &--first {
+        grid-column: 2 / span 3;
+        grid-row: 2;
+      }
+      
+      &--middle {
+        grid-column: 7 / span 3;
+        grid-row: 6;
+      }
+      
+      &--last {
+        grid-column: 12 / span 3;
+        grid-row: 3;
+      }
+    }
+    
+    &__link {
+  
+      &--inactive {
+        h2 {
+        }
+      }
+    }
+  
+    &__section {
+    }
+  
+    &__section--bg {
+    }
+  
+    &__section--engineered {
+    }
+  
+    &__section--install {
+    }
+  
+    &__section--control {
+    }
+  }
+}

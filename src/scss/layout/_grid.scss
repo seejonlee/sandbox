@@ -1,0 +1,12 @@
+$nsContainer: '.grid-16c';
+$nsItem: '.grid-item';
+
+#{$nsContainer} {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-gap: 0;
+}
+
+#{$nsItem} {
+  
+}

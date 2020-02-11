@@ -1,0 +1,68 @@
+$ns: '.tab-scroll';
+
+#{$ns} {
+  border: 3px solid red;
+  box-sizing: border-box;
+  
+  grid-template-rows: repeat(64, 1fr);
+  
+  &__nav-item {
+    cursor: pointer;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    
+    &--first {
+      grid-column: 2 / span 3;
+      grid-row: 2;
+    }
+    
+    &--middle {
+      grid-column: 7 / span 3;
+      grid-row: 6;
+    }
+    
+    &--last {
+      grid-column: 12 / span 3;
+      grid-row: 3;
+    }
+
+  }
+  
+  &__link {
+    color: #FFFFFF;
+    text-decoration: none;
+
+    &--inactive {
+      h2 {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &__section {
+    min-height: 1590px;
+    grid-column: 1 / -1;
+    grid-row: span 16;
+  }
+
+  &__section--bg {
+    background-color: #0E1D3A;
+    grid-row: 1 / span 16;
+  }
+
+  &__section--engineered {
+    background-color: #4E76BA;
+    // grid-row: 2;
+  }
+
+  &__section--install {
+    background-color: #384422;
+    // grid-row: 3;
+  }
+
+  &__section--control {
+    background-color: #96593D;
+    // grid-row: 4;
+  }
+}
